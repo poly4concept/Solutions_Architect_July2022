@@ -11,14 +11,27 @@ Task 1: Deploy VPC using Management console
 7. Perform clean up actions
 
 
-
-
-
-
-
 For guide, you are check the links below:
 
 https://docs.aws.amazon.com/cli/latest/reference/ec2/
 
 https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-vpcs.html
 
+
+## Solution
+1. I launch my AWS console
+
+2. I created a new VPC using the *VPC and more* option on the VPC creation wizard
+
+   > Here is preview of the console :
+    ![Create a VPC with a public and private subnet, 2 route tables, NAT and internet gateway](Images/vpccreatepreview.PNG) 
+
+3. I created an amazon Linux instance  into the VPC I created above by specifying the network settings
+   
+   > Here is preview of the console :
+    ![Launch Instance into the VPC](Images/instanceinvpc.PNG)
+
+4. I tried ssh to the instance from a different computer and it was unsuccesful, because it's in a private subnet
+
+    > Here is preview of the terminal :
+    ![SSH unsuccesful because instance is in a private subnet](Images/instanceconnnectfail.PNG)
